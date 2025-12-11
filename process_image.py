@@ -50,3 +50,4 @@ if __name__ == "__main__":
         result = remove_white_background(input_file, output_file, threshold)
         if result:
             break
+

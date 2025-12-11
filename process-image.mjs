@@ -58,3 +58,4 @@ async function removeWhiteBackground() {
 }
 
 removeWhiteBackground();
+

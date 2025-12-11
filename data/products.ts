@@ -3,11 +3,15 @@ import { Product } from '@/types';
 export const products: Product[] = [
   {
     id: '1',
-    name: '小兔子吊飾',
-    category: '吊飾',
+    name: '小鹿莫卡 Moka — 森林系羊毛氈好朋友',
+    category: '擺飾',
     price: 380,
-    description: '可愛的小兔子吊飾，可以掛在包包或鑰匙上，陪伴你的每一天。',
-    images: ['/images/rabbit-1.jpg', '/images/rabbit-2.jpg'],
+    description: `帶著溫柔眼神的小鹿莫卡，是來自森林深處的療癒系小旅人。
+柔軟的羊毛氈質感與細緻的斑點花紋，讓牠無論放在書桌、床頭或展示架上，都能悄悄為空間增添一份溫暖與自然氣息。
+
+莫卡的穩定站姿與可愛表情，彷彿正靜靜陪伴著你，
+在忙碌的日子裡，帶來一點安心、一點微笑。`,
+    images: ['/images/messageImage_1765423562020.jpg'],
     size: '約 5cm',
     customizable: true,
     inStock: true,

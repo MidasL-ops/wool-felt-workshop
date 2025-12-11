@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { products } from '@/data/products';
 import { ProductCategory } from '@/types';
 
@@ -65,8 +66,18 @@ export default function Shop() {
                   href={`/shop/${product.id}`}
                   className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
                 >
-                  <div className="relative h-64 bg-gradient-to-br from-mint-green/20 to-cream-yellow/20 flex items-center justify-center">
-                    <span className="text-6xl">🧶</span>
+                  <div className="relative h-64 bg-gradient-to-br from-mint-green/20 to-cream-yellow/20 flex items-center justify-center overflow-hidden">
+                    {product.images && product.images.length > 0 ? (
+                      <Image
+                        src={product.images[0]}
+                        alt={product.name}
+                        width={400}
+                        height={400}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <span className="text-6xl">🧶</span>
+                    )}
                     {product.originalPrice && (
                       <span className="absolute top-4 right-4 bg-peach-pink text-white px-3 py-1 rounded-full text-sm font-medium">
                         特價
@@ -128,4 +139,5 @@ export default function Shop() {
     </div>
   );
 }
+
 

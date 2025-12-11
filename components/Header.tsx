@@ -34,7 +34,7 @@ export default function Header() {
                 priority
               />
             </div>
-            <span className="text-xl font-bold text-foreground group-hover:text-cta-primary transition-colors">
+            <span className="text-base sm:text-xl font-bold text-foreground group-hover:text-cta-primary transition-colors">
               薇薇V的羊毛氈手作坊
             </span>
           </Link>
@@ -111,4 +111,5 @@ export default function Header() {
     </header>
   );
 }
+
 

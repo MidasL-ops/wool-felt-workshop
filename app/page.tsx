@@ -19,7 +19,7 @@ export default function Home() {
                 alt="薇薇V的羊毛氈手作坊 Logo"
                 width={200}
                 height={200}
-                className="mx-auto"
+                className="mx-auto w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48"
                 priority
               />
             </div>
@@ -27,7 +27,7 @@ export default function Home() {
               把柔軟，捧在手心
               <br />
               <span className="text-cta-primary">把溫暖，分享給世界</span>
-            </h1>
+          </h1>
             <p className="text-lg md:text-xl text-text-secondary mb-2 leading-relaxed">
               每一件羊毛氈作品，都藏著一份療癒的力量。
             </p>
@@ -76,8 +76,18 @@ export default function Home() {
                 href={`/shop/${product.id}`}
                 className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
               >
-                <div className="relative h-64 bg-gradient-to-br from-mint-green/20 to-cream-yellow/20 flex items-center justify-center">
-                  <span className="text-6xl">🧶</span>
+                <div className="relative h-64 bg-gradient-to-br from-mint-green/20 to-cream-yellow/20 flex items-center justify-center overflow-hidden">
+                  {product.images && product.images.length > 0 ? (
+                    <Image
+                      src={product.images[0]}
+                      alt={product.name}
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <span className="text-6xl">🧶</span>
+                  )}
                   {product.originalPrice && (
                     <span className="absolute top-4 right-4 bg-peach-pink text-white px-3 py-1 rounded-full text-sm font-medium">
                       特價
@@ -134,7 +144,7 @@ export default function Home() {
               看看哪一個最能陪伴你。
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {/* Hana 系列 */}
             <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
               <div className="text-5xl mb-4 text-center">🌸</div>
@@ -200,8 +210,18 @@ export default function Home() {
                 href={`/shop/${product.id}`}
                 className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
               >
-                <div className="relative h-64 bg-gradient-to-br from-mint-green/20 to-cream-yellow/20 flex items-center justify-center">
-                  <span className="text-6xl">🧶</span>
+                <div className="relative h-64 bg-gradient-to-br from-mint-green/20 to-cream-yellow/20 flex items-center justify-center overflow-hidden">
+                  {product.images && product.images.length > 0 ? (
+            <Image
+                      src={product.images[0]}
+                      alt={product.name}
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <span className="text-6xl">🧶</span>
+                  )}
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">

@@ -78,10 +78,11 @@ export default function Footer() {
 
         <div className="border-t border-mint-green/20 pt-8 text-center text-sm text-text-secondary">
           <p>© {new Date().getFullYear()} 薇薇V的羊毛氈手作坊. All rights reserved.</p>
-          <p className="mt-2">因為可愛，是能療癒世界的語言。🌈</p>
+          <p className="mt-2 text-cta-primary font-medium">用羊毛氈，把溫暖縫進生活裡。🌼</p>
         </div>
       </div>
     </footer>
   );
 }
+
 

@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { products } from '@/data/products';
 
 interface ProductDetailPageProps {
@@ -33,17 +34,36 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Product Images */}
               <div className="space-y-4">
-                <div className="relative aspect-square bg-gradient-to-br from-mint-green/20 to-cream-yellow/20 rounded-2xl flex items-center justify-center overflow-hidden">
-                  <span className="text-9xl">🧶</span>
+                <div className="relative aspect-square bg-gradient-to-br from-mint-green/20 to-cream-yellow/20 rounded-2xl overflow-hidden">
+                  {product.images && product.images.length > 0 ? (
+                    <Image
+                      src={product.images[0]}
+                      alt={product.name}
+                      width={800}
+                      height={800}
+                      className="w-full h-full object-cover"
+                      priority
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <span className="text-9xl">🧶</span>
+                    </div>
+                  )}
                 </div>
-                {product.images.length > 1 && (
+                {product.images && product.images.length > 1 && (
                   <div className="grid grid-cols-4 gap-4">
                     {product.images.slice(1, 5).map((image, index) => (
                       <div
                         key={index}
-                        className="aspect-square bg-gradient-to-br from-mint-green/10 to-cream-yellow/10 rounded-lg flex items-center justify-center"
+                        className="relative aspect-square bg-gradient-to-br from-mint-green/10 to-cream-yellow/10 rounded-lg overflow-hidden"
                       >
-                        <span className="text-3xl">🧶</span>
+                        <Image
+                          src={image}
+                          alt={`${product.name} - 圖片 ${index + 2}`}
+                          width={200}
+                          height={200}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                     ))}
                   </div>
@@ -75,8 +95,8 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                     NT$ {product.price}
                   </span>
                 </div>
-                <div className="mb-6 p-4 bg-mint-green/10 rounded-lg">
-                  <p className="text-text-secondary leading-relaxed">
+                <div className="mb-6 p-4 sm:p-6 bg-mint-green/10 rounded-lg">
+                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
                     {product.description}
                   </p>
                 </div>
@@ -195,4 +215,5 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
     </div>
   );
 }
+
 
