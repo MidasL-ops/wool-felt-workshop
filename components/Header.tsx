@@ -24,12 +24,12 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 flex items-center justify-center group-hover:scale-110 transition-transform bg-mint-green/10 rounded-full p-1">
+            <div className="w-10 h-10 flex items-center justify-center group-hover:scale-110 transition-transform">
               <Image
                 src="/logo-sheep-transparent.png"
                 alt="薇薇V的羊毛氈手作坊 Logo"
-                width={32}
-                height={32}
+                width={40}
+                height={40}
                 className="object-contain"
                 priority
               />

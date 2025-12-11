@@ -9,12 +9,12 @@ export default function Footer() {
           {/* 品牌資訊 */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 flex items-center justify-center bg-mint-green/10 rounded-full p-1">
+              <div className="w-8 h-8 flex items-center justify-center">
                 <Image
                   src="/logo-sheep-transparent.png"
                   alt="薇薇V的羊毛氈手作坊 Logo"
-                  width={24}
-                  height={24}
+                  width={32}
+                  height={32}
                   className="object-contain"
                 />
               </div>

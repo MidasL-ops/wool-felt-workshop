@@ -14,10 +14,10 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="mb-6 inline-block">
               <Image
-                src="/hero-sheep-transparent.png"
+                src="/logo-sheep-transparent.png"
                 alt="薇薇V的羊毛氈手作坊 Logo"
-                width={300}
-                height={300}
+                width={200}
+                height={200}
                 className="mx-auto"
                 priority
               />
