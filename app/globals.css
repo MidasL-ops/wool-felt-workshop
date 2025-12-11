@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  /* 品牌主色 */
+  --mint-green: #A8E6CF;
+  --cream-yellow: #FFE5B4;
+  --cloud-white: #FFFFFF;
+  --peach-pink: #FFD3B6;
+  --forest-green: #7FB069;
+  
+  /* 背景與文字 */
+  --background: #FFFFFF;
+  --foreground: #2C2C2C;
+  --text-secondary: #666666;
+}
+
+@theme inline {
+  /* 品牌色彩 */
+  --color-mint-green: var(--mint-green);
+  --color-cream-yellow: var(--cream-yellow);
+  --color-cloud-white: var(--cloud-white);
+  --color-peach-pink: var(--peach-pink);
+  --color-forest-green: var(--forest-green);
+  
+  /* 基礎色彩 */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-text-secondary: var(--text-secondary);
+  
+  /* 字體 */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", sans-serif;
+  line-height: 1.6;
+}
+
+/* 平滑滾動 */
+html {
+  scroll-behavior: smooth;
+}
