@@ -19,7 +19,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-cta-primary/20 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-primary/20 shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -34,7 +34,7 @@ export default function Header() {
                 priority
               />
             </div>
-            <span className="text-base sm:text-xl font-bold text-foreground group-hover:text-cta-primary transition-colors">
+            <span className="text-base sm:text-xl font-bold text-foreground group-hover:text-accent transition-colors">
               薇薇V的羊毛氈手作坊
             </span>
           </Link>
@@ -49,8 +49,8 @@ export default function Header() {
                   href={item.href}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive
-                      ? 'bg-mint-green/30 text-cta-primary'
-                      : 'text-text-secondary hover:text-foreground hover:bg-mint-green/10'
+                      ? 'bg-primary/30 text-accent'
+                      : 'text-text-secondary hover:text-foreground hover:bg-primary/10'
                   }`}
                 >
                   {item.label}
@@ -62,7 +62,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-foreground hover:bg-mint-green/10 transition-colors"
+            className="md:hidden p-2 rounded-lg text-foreground hover:bg-primary/10 transition-colors"
             aria-label="選單"
           >
             <svg
@@ -85,7 +85,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-mint-green/20">
+          <nav className="md:hidden py-4 border-t border-peach-pink/20">
             <div className="flex flex-col space-y-2">
               {navItems.map((item) => {
                 const isActive = pathname === item.href;
@@ -96,8 +96,8 @@ export default function Header() {
                     onClick={() => setIsMenuOpen(false)}
                     className={`px-4 py-3 rounded-lg text-base font-medium transition-colors ${
                       isActive
-                        ? 'bg-mint-green/30 text-cta-primary'
-                        : 'text-text-secondary hover:text-foreground hover:bg-mint-green/10'
+                        ? 'bg-primary/30 text-accent'
+                        : 'text-text-secondary hover:text-foreground hover:bg-primary/10'
                     }`}
                   >
                     {item.label}

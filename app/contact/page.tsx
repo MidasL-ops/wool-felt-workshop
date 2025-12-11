@@ -51,7 +51,7 @@ function ContactForm() {
   return (
     <div className="min-h-screen bg-cloud-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-mint-green/30 via-cream-yellow/20 to-peach-pink/20 py-16 md:py-24">
+      <section className="bg-gradient-to-br from-primary/30 via-cream-yellow/20 to-primary/20 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="mb-6 inline-block">
@@ -73,10 +73,10 @@ function ContactForm() {
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
               {selectedProduct && (
-                <div className="mb-8 p-6 bg-mint-green/10 rounded-lg">
+                <div className="mb-8 p-6 bg-primary/10 rounded-lg">
                   <p className="text-sm text-text-secondary mb-2">詢問商品：</p>
-                  <p className="text-lg font-semibold text-foreground">{selectedProduct.name}</p>
-                  <p className="text-cta-primary">NT$ {selectedProduct.price}</p>
+                  <p className="text-lg font-semibold text-heading-card">{selectedProduct.name}</p>
+                  <p className="text-accent">NT$ {selectedProduct.price}</p>
                 </div>
               )}
 
@@ -100,7 +100,7 @@ function ContactForm() {
                       value={formData.type}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-mint-green/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest-green focus:border-transparent"
+                      className="w-full px-4 py-3 border border-peach-pink/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-peach-pink focus:border-transparent"
                     >
                       <option value="訂製詢問">訂製詢問</option>
                       <option value="一般詢問">一般詢問</option>
@@ -119,7 +119,7 @@ function ContactForm() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-mint-green/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest-green focus:border-transparent"
+                      className="w-full px-4 py-3 border border-peach-pink/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-peach-pink focus:border-transparent"
                       placeholder="請輸入您的姓名"
                     />
                   </div>
@@ -135,7 +135,7 @@ function ContactForm() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-mint-green/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest-green focus:border-transparent"
+                      className="w-full px-4 py-3 border border-peach-pink/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-peach-pink focus:border-transparent"
                       placeholder="example@email.com"
                     />
                   </div>
@@ -150,7 +150,7 @@ function ContactForm() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-mint-green/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest-green focus:border-transparent"
+                      className="w-full px-4 py-3 border border-peach-pink/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-peach-pink focus:border-transparent"
                       placeholder="0912-345-678"
                     />
                   </div>
@@ -165,7 +165,7 @@ function ContactForm() {
                         name="productId"
                         value={formData.productId}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-mint-green/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest-green focus:border-transparent"
+                        className="w-full px-4 py-3 border border-peach-pink/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-peach-pink focus:border-transparent"
                       >
                         <option value="">請選擇參考商品（選填）</option>
                         {products.map((product) => (
@@ -188,14 +188,14 @@ function ContactForm() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 border border-mint-green/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest-green focus:border-transparent resize-none"
+                      className="w-full px-4 py-3 border border-peach-pink/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-peach-pink focus:border-transparent resize-none"
                       placeholder="請詳細描述您的需求或問題..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full px-8 py-4 bg-cta-primary text-white rounded-full font-medium hover:bg-cta-primary/90 transition-colors shadow-lg hover:shadow-xl"
+                    className="w-full px-8 py-4 bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl"
                   >
                     送出詢問
                   </button>
@@ -203,28 +203,31 @@ function ContactForm() {
               )}
 
               {/* Contact Info */}
-              <div className="mt-12 pt-12 border-t border-mint-green/20">
-                <h3 className="text-xl font-semibold text-foreground mb-6">其他聯絡方式</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="text-center p-4 bg-mint-green/10 rounded-lg">
-                    <span className="text-3xl mb-2 block">📧</span>
-                    <p className="text-sm text-text-secondary mb-1">電子信箱</p>
-                    <a href="mailto:contact@woolfelt.com" className="text-foreground hover:text-cta-primary transition-colors">
-                      contact@woolfelt.com
+              <div className="mt-12 pt-12 border-t border-peach-pink/20">
+                <h3 className="text-xl font-semibold text-heading-card mb-6">其他聯絡方式</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-md mx-auto">
+                  <div className="text-center p-4 bg-primary/10 rounded-lg">
+                    <span className="text-3xl mb-2 block">📘</span>
+                    <p className="text-sm text-text-secondary mb-1">Facebook</p>
+                    <a 
+                      href="https://www.facebook.com/profile.php?id=61559206236758" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-foreground hover:text-accent transition-colors"
+                    >
+                      前往粉絲專頁
                     </a>
                   </div>
                   <div className="text-center p-4 bg-cream-yellow/10 rounded-lg">
                     <span className="text-3xl mb-2 block">📷</span>
                     <p className="text-sm text-text-secondary mb-1">Instagram</p>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-cta-primary transition-colors">
-                      @woolfelt_workshop
-                    </a>
-                  </div>
-                  <div className="text-center p-4 bg-peach-pink/10 rounded-lg">
-                    <span className="text-3xl mb-2 block">💬</span>
-                    <p className="text-sm text-text-secondary mb-1">LINE</p>
-                    <a href="https://line.me" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-cta-primary transition-colors">
-                      加入好友
+                    <a 
+                      href="https://www.instagram.com/eaea_1282025/?igsh=MXdkdGZtc2RoOGo2eA%3D%3D&utm_source=qr#" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-foreground hover:text-accent transition-colors"
+                    >
+                      @eaea_1282025
                     </a>
                   </div>
                 </div>

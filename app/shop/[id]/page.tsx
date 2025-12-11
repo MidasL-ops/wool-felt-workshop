@@ -25,9 +25,9 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
           <div className="max-w-6xl mx-auto">
             {/* Breadcrumb */}
             <nav className="mb-8 text-sm text-text-secondary">
-              <Link href="/" className="hover:text-cta-primary">首頁</Link>
+              <Link href="/" className="hover:text-accent">首頁</Link>
               <span className="mx-2">/</span>
-              <Link href="/shop" className="hover:text-cta-primary">商品</Link>
+              <Link href="/shop" className="hover:text-accent">商品</Link>
               <span className="mx-2">/</span>
               <span className="text-foreground">{product.name}</span>
             </nav>
@@ -35,7 +35,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Product Images */}
               <div className="space-y-4">
-                <div className="relative aspect-square bg-gradient-to-br from-mint-green/20 to-cream-yellow/20 rounded-2xl overflow-hidden">
+                <div className="relative aspect-square bg-gradient-to-br from-primary/20 to-cream-yellow/20 rounded-2xl overflow-hidden">
                   {product.images && product.images.length > 0 ? (
                     <Image
                       src={product.images[0]}
@@ -56,7 +56,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                     {product.images.slice(1, 5).map((image, index) => (
                       <div
                         key={index}
-                        className="relative aspect-square bg-gradient-to-br from-mint-green/10 to-cream-yellow/10 rounded-lg overflow-hidden"
+                        className="relative aspect-square bg-gradient-to-br from-primary/10 to-cream-yellow/10 rounded-lg overflow-hidden"
                       >
                         <Image
                           src={image}
@@ -74,11 +74,11 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
               {/* Product Info */}
               <div>
                 <div className="mb-4">
-                  <span className="inline-block text-sm text-mint-green bg-mint-green/10 px-3 py-1 rounded-full mb-3">
+                  <span className="inline-block text-sm text-accent bg-primary/10 px-3 py-1 rounded-full mb-3">
                     {product.category}
                   </span>
                   {product.customizable && (
-                    <span className="inline-block ml-2 text-sm text-peach-pink bg-peach-pink/10 px-3 py-1 rounded-full">
+                    <span className="inline-block ml-2 text-sm text-accent bg-primary/10 px-3 py-1 rounded-full">
                       可訂製
                     </span>
                   )}
@@ -92,11 +92,11 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                       NT$ {product.originalPrice}
                     </span>
                   )}
-                  <span className="text-4xl font-bold text-cta-primary">
+                  <span className="text-4xl font-bold text-accent">
                     NT$ {product.price}
                   </span>
                 </div>
-                <div className="mb-6 p-4 sm:p-6 bg-mint-green/10 rounded-lg">
+                <div className="mb-6 p-4 sm:p-6 bg-primary/10 rounded-lg">
                   <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
                     {product.description}
                   </p>
@@ -112,7 +112,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                   )}
                   <div className="flex items-center">
                     <span className="text-text-secondary w-24">庫存：</span>
-                    <span className={`font-medium ${product.inStock ? 'text-cta-primary' : 'text-red-500'}`}>
+                    <span className={`font-medium ${product.inStock ? 'text-accent' : 'text-red-500'}`}>
                       {product.inStock ? '有現貨' : '缺貨中'}
                     </span>
                   </div>
@@ -126,7 +126,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
 
                 {/* Story */}
                 {product.story && (
-                  <div className="mb-6 p-6 bg-gradient-to-br from-cream-yellow/10 to-peach-pink/10 rounded-lg">
+                  <div className="mb-6 p-6 bg-gradient-to-br from-cream-yellow/10 to-primary/10 rounded-lg">
                     <h3 className="font-semibold text-foreground mb-2">作品故事</h3>
                     <p className="text-text-secondary leading-relaxed italic">
                       "{product.story}"
@@ -140,7 +140,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                     {product.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-sm text-text-secondary bg-white border border-mint-green/20 px-3 py-1 rounded-full"
+                        className="text-sm text-text-secondary bg-white border border-peach-pink/20 px-3 py-1 rounded-full"
                       >
                         #{tag}
                       </span>
@@ -154,14 +154,14 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                     <>
                       <Link
                         href={`/contact?product=${product.id}`}
-                        className="block w-full text-center px-8 py-4 bg-cta-primary text-white rounded-full font-medium hover:bg-cta-primary/90 transition-colors shadow-lg hover:shadow-xl"
+                        className="block w-full text-center px-8 py-4 bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl"
                       >
                         {product.customizable ? '訂製詢問' : '立即購買'}
                       </Link>
                       {product.customizable && (
                         <Link
                           href={`/contact?product=${product.id}&type=訂製詢問`}
-                          className="block w-full text-center px-8 py-4 bg-white text-cta-primary border-2 border-cta-primary rounded-full font-medium hover:bg-mint-green/10 transition-colors"
+                          className="block w-full text-center px-8 py-4 bg-white text-accent border-2 border-primary rounded-full font-medium hover:bg-primary/10 transition-colors"
                         >
                           一般詢問
                         </Link>
@@ -172,7 +172,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                       <p className="text-text-secondary mb-4">目前缺貨中</p>
                       <Link
                         href={`/contact?product=${product.id}`}
-                        className="inline-block px-8 py-3 bg-cta-primary text-white rounded-full font-medium hover:bg-cta-primary/90 transition-colors"
+                        className="inline-block px-8 py-3 bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition-colors"
                       >
                         到貨通知
                       </Link>
@@ -195,14 +195,14 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                       href={`/shop/${relatedProduct.id}`}
                       className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
                     >
-                      <div className="relative h-48 bg-gradient-to-br from-mint-green/20 to-cream-yellow/20 flex items-center justify-center">
+                      <div className="relative h-48 bg-gradient-to-br from-primary/20 to-cream-yellow/20 flex items-center justify-center">
                         <span className="text-5xl">🧶</span>
                       </div>
                       <div className="p-4">
-                        <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-cta-primary transition-colors">
+                        <h3 className="text-lg font-semibold text-heading-card mb-2 group-hover:text-accent transition-colors">
                           {relatedProduct.name}
                         </h3>
-                        <p className="text-cta-primary font-bold">
+                        <p className="text-accent font-bold">
                           NT$ {relatedProduct.price}
                         </p>
                       </div>

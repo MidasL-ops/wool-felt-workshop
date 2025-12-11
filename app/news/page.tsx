@@ -8,7 +8,7 @@ export default function News() {
   return (
     <div className="min-h-screen bg-cloud-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-mint-green/30 via-cream-yellow/20 to-peach-pink/20 py-16 md:py-24">
+      <section className="bg-gradient-to-br from-primary/30 via-cream-yellow/20 to-primary/20 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="mb-6 inline-block">
@@ -36,7 +36,7 @@ export default function News() {
                   className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
                 >
                   {item.image && (
-                    <div className="relative h-64 bg-gradient-to-br from-mint-green/20 to-cream-yellow/20 flex items-center justify-center">
+                    <div className="relative h-64 bg-gradient-to-br from-primary/20 to-cream-yellow/20 flex items-center justify-center">
                       <span className="text-6xl">📰</span>
                     </div>
                   )}
@@ -49,7 +49,7 @@ export default function News() {
                           day: 'numeric',
                         })}
                       </span>
-                      <span className="text-xs text-peach-pink bg-peach-pink/10 px-3 py-1 rounded-full">
+                      <span className="text-xs text-accent bg-primary/10 px-3 py-1 rounded-full">
                         精選
                       </span>
                     </div>
@@ -61,7 +61,7 @@ export default function News() {
                     </p>
                     <Link
                       href={`/news/${item.id}`}
-                      className="inline-block text-cta-primary hover:text-cta-primary/80 font-medium transition-colors"
+                      className="inline-block text-accent hover:text-accent/80 font-medium transition-colors"
                     >
                       閱讀更多 →
                     </Link>
@@ -84,7 +84,7 @@ export default function News() {
                 className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
               >
                 {item.image && (
-                  <div className="relative h-48 bg-gradient-to-br from-mint-green/20 to-cream-yellow/20 flex items-center justify-center">
+                  <div className="relative h-48 bg-gradient-to-br from-primary/20 to-cream-yellow/20 flex items-center justify-center">
                     <span className="text-5xl">📰</span>
                   </div>
                 )}
@@ -104,7 +104,7 @@ export default function News() {
                   </p>
                   <Link
                     href={`/news/${item.id}`}
-                    className="inline-block text-cta-primary hover:text-cta-primary/80 font-medium text-sm transition-colors"
+                    className="inline-block text-accent hover:text-accent/80 font-medium text-sm transition-colors"
                   >
                     閱讀更多 →
                   </Link>

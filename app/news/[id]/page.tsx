@@ -23,9 +23,9 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
           <div className="max-w-4xl mx-auto">
             {/* Breadcrumb */}
             <nav className="mb-8 text-sm text-text-secondary">
-              <Link href="/" className="hover:text-cta-primary">首頁</Link>
+              <Link href="/" className="hover:text-accent">首頁</Link>
               <span className="mx-2">/</span>
-              <Link href="/news" className="hover:text-cta-primary">最新消息</Link>
+              <Link href="/news" className="hover:text-accent">最新消息</Link>
               <span className="mx-2">/</span>
               <span className="text-foreground">{newsItem.title}</span>
             </nav>
@@ -33,7 +33,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
             {/* News Content */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               {newsItem.image && (
-                <div className="relative h-96 bg-gradient-to-br from-mint-green/20 to-cream-yellow/20 flex items-center justify-center">
+                <div className="relative h-96 bg-gradient-to-br from-primary/20 to-cream-yellow/20 flex items-center justify-center">
                   <span className="text-9xl">📰</span>
                 </div>
               )}
@@ -47,7 +47,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
                     })}
                   </span>
                   {newsItem.featured && (
-                    <span className="text-sm text-peach-pink bg-peach-pink/10 px-3 py-1 rounded-full">
+                    <span className="text-sm text-accent bg-primary/10 px-3 py-1 rounded-full">
                       精選
                     </span>
                   )}
@@ -67,7 +67,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
             <div className="mt-8 text-center">
               <Link
                 href="/news"
-                className="inline-block px-8 py-3 bg-mint-green text-foreground rounded-full font-medium hover:bg-mint-green/80 transition-colors"
+                className="inline-block px-8 py-3 bg-primary text-foreground rounded-full font-medium hover:bg-primary/80 transition-colors"
               >
                 ← 返回消息列表
               </Link>

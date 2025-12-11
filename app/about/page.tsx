@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div className="min-h-screen bg-cloud-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-mint-green/30 via-cream-yellow/20 to-peach-pink/20 py-16 md:py-24">
+      <section className="bg-gradient-to-br from-primary/30 via-cream-yellow/20 to-primary/20 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="mb-6 inline-block">
@@ -11,7 +11,7 @@ export default function About() {
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               About 薇薇V的羊毛氈手作坊
             </h1>
-            <p className="text-xl text-cta-primary font-medium">
+            <p className="text-xl text-accent font-medium">
               把柔軟，捧在手心；把喜悅，分享給世界。
             </p>
           </div>
@@ -44,7 +44,7 @@ export default function About() {
               </div>
 
               {/* Section 2 */}
-              <div className="mb-12 bg-gradient-to-br from-cream-yellow/10 to-peach-pink/10 rounded-2xl p-8 md:p-12">
+              <div className="mb-12 bg-gradient-to-br from-cream-yellow/10 to-primary/10 rounded-2xl p-8 md:p-12">
                 <div className="flex items-start space-x-4 mb-6">
                   <span className="text-4xl">🧸</span>
                   <h2 className="text-3xl font-bold text-foreground">一件可愛的作品，能讓人重新笑起來</h2>
@@ -55,7 +55,7 @@ export default function About() {
                 </p>
                 <p className="text-lg text-text-secondary leading-relaxed">
                   這份喜悅並不只來自外型的可愛，
-                  更來自作品中那份 <span className="font-semibold text-cta-primary">溫暖、善意與正向能量</span>。
+                  更來自作品中那份 <span className="font-semibold text-accent">溫暖、善意與正向能量</span>。
                 </p>
               </div>
 
@@ -77,8 +77,8 @@ export default function About() {
               </div>
 
               {/* Closing */}
-              <div className="text-center bg-gradient-to-br from-mint-green/20 to-forest-green/10 rounded-2xl p-8 md:p-12">
-                <p className="text-2xl md:text-3xl font-bold text-cta-primary mb-4">
+              <div className="text-center bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl p-8 md:p-12">
+                <p className="text-2xl md:text-3xl font-bold text-accent mb-4">
                   🌈 因為可愛，是能療癒世界的語言。
                 </p>
               </div>

@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="bg-white/60 backdrop-blur-sm border-t border-cta-primary/20 mt-20">
+    <footer className="bg-white/60 backdrop-blur-sm border-t border-primary/20 mt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* 品牌資訊 */}
@@ -31,22 +31,22 @@ export default function Footer() {
             <h3 className="font-semibold text-foreground mb-4">快速連結</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-text-secondary hover:text-cta-primary transition-colors text-sm">
+                <Link href="/about" className="text-text-secondary hover:text-accent transition-colors text-sm">
                   關於我們
                 </Link>
               </li>
               <li>
-                <Link href="/gallery" className="text-text-secondary hover:text-cta-primary transition-colors text-sm">
+                <Link href="/gallery" className="text-text-secondary hover:text-accent transition-colors text-sm">
                   作品展示
                 </Link>
               </li>
               <li>
-                <Link href="/shop" className="text-text-secondary hover:text-cta-primary transition-colors text-sm">
+                <Link href="/shop" className="text-text-secondary hover:text-accent transition-colors text-sm">
                   商品列表
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-text-secondary hover:text-cta-primary transition-colors text-sm">
+                <Link href="/contact" className="text-text-secondary hover:text-accent transition-colors text-sm">
                   聯絡我們
                 </Link>
               </li>
@@ -58,27 +58,32 @@ export default function Footer() {
             <h3 className="font-semibold text-foreground mb-4">聯絡我們</h3>
             <ul className="space-y-2 text-sm text-text-secondary">
               <li>
-                <a href="mailto:contact@woolfelt.com" className="hover:text-cta-primary transition-colors">
-                  📧 contact@woolfelt.com
+                <a 
+                  href="https://www.facebook.com/profile.php?id=61559206236758" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-accent transition-colors"
+                >
+                  📘 Facebook
                 </a>
               </li>
               <li>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-cta-primary transition-colors">
+                <a 
+                  href="https://www.instagram.com/eaea_1282025/?igsh=MXdkdGZtc2RoOGo2eA%3D%3D&utm_source=qr#" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-accent transition-colors"
+                >
                   📷 Instagram
-                </a>
-              </li>
-              <li>
-                <a href="https://line.me" target="_blank" rel="noopener noreferrer" className="hover:text-cta-primary transition-colors">
-                  💬 LINE
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-mint-green/20 pt-8 text-center text-sm text-text-secondary">
+        <div className="border-t border-peach-pink/20 pt-8 text-center text-sm text-text-secondary">
           <p>© {new Date().getFullYear()} 薇薇V的羊毛氈手作坊. All rights reserved.</p>
-          <p className="mt-2 text-cta-primary font-medium">用羊毛氈，把溫暖縫進生活裡。🌼</p>
+          <p className="mt-2 text-accent font-medium">願每一份柔軟，都陪你走一段路。🌼</p>
         </div>
       </div>
     </footer>
