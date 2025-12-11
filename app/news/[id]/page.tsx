@@ -17,7 +17,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-cloud-white">
+    <div className="min-h-screen bg-bg-cloud">
       <article className="py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">

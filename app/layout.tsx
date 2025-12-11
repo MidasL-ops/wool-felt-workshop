@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Noto_Sans_TC, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Providers from "@/components/Providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -52,11 +53,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${notoSansTC.variable} ${poppins.variable} antialiased`}
       >
-        <Header />
-        <main className="min-h-screen">
-        {children}
-        </main>
-        <Footer />
+        <Providers>
+          <Header />
+          <main className="min-h-screen">
+          {children}
+          </main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

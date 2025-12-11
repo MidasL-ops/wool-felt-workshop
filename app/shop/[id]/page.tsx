@@ -18,7 +18,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
   }
 
   return (
-    <div className="min-h-screen bg-cloud-white">
+    <div className="min-h-screen bg-bg-cloud">
       {/* Product Detail */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

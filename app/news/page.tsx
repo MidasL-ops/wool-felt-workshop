@@ -6,7 +6,7 @@ export default function News() {
   const regularNews = news.filter(n => !n.featured);
 
   return (
-    <div className="min-h-screen bg-cloud-white">
+    <div className="min-h-screen bg-bg-cloud">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/30 via-cream-yellow/20 to-primary/20 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
