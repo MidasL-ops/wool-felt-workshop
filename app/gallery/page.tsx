@@ -71,7 +71,7 @@ export default function Gallery() {
               </p>
               <Link
                 href="/shop"
-                className="inline-block px-8 py-3 bg-forest-green text-white rounded-full font-medium hover:bg-forest-green/90 transition-colors"
+                className="inline-block px-8 py-3 bg-cta-primary text-white rounded-full font-medium hover:bg-cta-primary/90 transition-colors"
               >
                 查看商品
               </Link>
@@ -82,3 +82,4 @@ export default function Gallery() {
     </div>
   );
 }
+

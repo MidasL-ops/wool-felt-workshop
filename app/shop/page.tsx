@@ -43,7 +43,7 @@ export default function Shop() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-2 rounded-full font-medium transition-colors ${
                   selectedCategory === category
-                    ? 'bg-forest-green text-white'
+                    ? 'bg-cta-primary text-white'
                     : 'bg-mint-green/20 text-foreground hover:bg-mint-green/30'
                 }`}
               >
@@ -87,7 +87,7 @@ export default function Shop() {
                         <span className="text-xs text-text-secondary">可訂製</span>
                       )}
                     </div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-forest-green transition-colors">
+                    <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-cta-primary transition-colors">
                       {product.name}
                     </h3>
                     <p className="text-text-secondary text-sm mb-4 line-clamp-2">
@@ -100,7 +100,7 @@ export default function Shop() {
                             NT$ {product.originalPrice}
                           </span>
                         )}
-                        <span className="text-2xl font-bold text-forest-green">
+                        <span className="text-2xl font-bold text-cta-primary">
                           NT$ {product.price}
                         </span>
                       </div>
@@ -117,7 +117,7 @@ export default function Shop() {
               </p>
               <button
                 onClick={() => setSelectedCategory('全部')}
-                className="inline-block px-8 py-3 bg-forest-green text-white rounded-full font-medium hover:bg-forest-green/90 transition-colors"
+                className="inline-block px-8 py-3 bg-cta-primary text-white rounded-full font-medium hover:bg-cta-primary/90 transition-colors"
               >
                 查看全部商品
               </button>
@@ -128,3 +128,4 @@ export default function Shop() {
     </div>
   );
 }
+

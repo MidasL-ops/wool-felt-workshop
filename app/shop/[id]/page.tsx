@@ -23,9 +23,9 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
           <div className="max-w-6xl mx-auto">
             {/* Breadcrumb */}
             <nav className="mb-8 text-sm text-text-secondary">
-              <Link href="/" className="hover:text-forest-green">首頁</Link>
+              <Link href="/" className="hover:text-cta-primary">首頁</Link>
               <span className="mx-2">/</span>
-              <Link href="/shop" className="hover:text-forest-green">商品</Link>
+              <Link href="/shop" className="hover:text-cta-primary">商品</Link>
               <span className="mx-2">/</span>
               <span className="text-foreground">{product.name}</span>
             </nav>
@@ -71,7 +71,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                       NT$ {product.originalPrice}
                     </span>
                   )}
-                  <span className="text-4xl font-bold text-forest-green">
+                  <span className="text-4xl font-bold text-cta-primary">
                     NT$ {product.price}
                   </span>
                 </div>
@@ -91,7 +91,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                   )}
                   <div className="flex items-center">
                     <span className="text-text-secondary w-24">庫存：</span>
-                    <span className={`font-medium ${product.inStock ? 'text-forest-green' : 'text-red-500'}`}>
+                    <span className={`font-medium ${product.inStock ? 'text-cta-primary' : 'text-red-500'}`}>
                       {product.inStock ? '有現貨' : '缺貨中'}
                     </span>
                   </div>
@@ -133,14 +133,14 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                     <>
                       <Link
                         href={`/contact?product=${product.id}`}
-                        className="block w-full text-center px-8 py-4 bg-forest-green text-white rounded-full font-medium hover:bg-forest-green/90 transition-colors shadow-lg hover:shadow-xl"
+                        className="block w-full text-center px-8 py-4 bg-cta-primary text-white rounded-full font-medium hover:bg-cta-primary/90 transition-colors shadow-lg hover:shadow-xl"
                       >
                         {product.customizable ? '訂製詢問' : '立即購買'}
                       </Link>
                       {product.customizable && (
                         <Link
                           href={`/contact?product=${product.id}&type=訂製詢問`}
-                          className="block w-full text-center px-8 py-4 bg-white text-forest-green border-2 border-forest-green rounded-full font-medium hover:bg-mint-green/10 transition-colors"
+                          className="block w-full text-center px-8 py-4 bg-white text-cta-primary border-2 border-cta-primary rounded-full font-medium hover:bg-mint-green/10 transition-colors"
                         >
                           一般詢問
                         </Link>
@@ -151,7 +151,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                       <p className="text-text-secondary mb-4">目前缺貨中</p>
                       <Link
                         href={`/contact?product=${product.id}`}
-                        className="inline-block px-8 py-3 bg-forest-green text-white rounded-full font-medium hover:bg-forest-green/90 transition-colors"
+                        className="inline-block px-8 py-3 bg-cta-primary text-white rounded-full font-medium hover:bg-cta-primary/90 transition-colors"
                       >
                         到貨通知
                       </Link>
@@ -178,10 +178,10 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                         <span className="text-5xl">🧶</span>
                       </div>
                       <div className="p-4">
-                        <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-forest-green transition-colors">
+                        <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-cta-primary transition-colors">
                           {relatedProduct.name}
                         </h3>
-                        <p className="text-forest-green font-bold">
+                        <p className="text-cta-primary font-bold">
                           NT$ {relatedProduct.price}
                         </p>
                       </div>
@@ -195,3 +195,4 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
     </div>
   );
 }
+

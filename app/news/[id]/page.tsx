@@ -22,9 +22,9 @@ export default function NewsDetailPage({ params }: NewsDetailPageProps) {
           <div className="max-w-4xl mx-auto">
             {/* Breadcrumb */}
             <nav className="mb-8 text-sm text-text-secondary">
-              <Link href="/" className="hover:text-forest-green">首頁</Link>
+              <Link href="/" className="hover:text-cta-primary">首頁</Link>
               <span className="mx-2">/</span>
-              <Link href="/news" className="hover:text-forest-green">最新消息</Link>
+              <Link href="/news" className="hover:text-cta-primary">最新消息</Link>
               <span className="mx-2">/</span>
               <span className="text-foreground">{newsItem.title}</span>
             </nav>
@@ -77,3 +77,4 @@ export default function NewsDetailPage({ params }: NewsDetailPageProps) {
     </div>
   );
 }
+

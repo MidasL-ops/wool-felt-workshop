@@ -37,3 +37,4 @@ export const news: News[] = [
     featured: false
   }
 ];
+

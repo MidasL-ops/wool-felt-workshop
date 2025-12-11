@@ -9,16 +9,23 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-mint-green/30 via-cream-yellow/20 to-peach-pink/20 py-20 md:py-32">
+      <section className="relative py-20 md:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="mb-6 inline-block">
-              <span className="text-6xl">🧶</span>
+              <Image
+                src="/hero-sheep-transparent.png"
+                alt="薇薇V的羊毛氈手作坊 Logo"
+                width={300}
+                height={300}
+                className="mx-auto"
+                priority
+              />
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               把柔軟，捧在手心
               <br />
-              <span className="text-forest-green">把喜悅，分享給世界</span>
+              <span className="text-cta-primary">把喜悅，分享給世界</span>
             </h1>
             <p className="text-lg md:text-xl text-text-secondary mb-8 leading-relaxed">
               以可愛、生動、富含情緒療癒力量的羊毛氈作品為核心，
@@ -28,13 +35,13 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/shop"
-                className="px-8 py-3 bg-forest-green text-white rounded-full font-medium hover:bg-forest-green/90 transition-colors shadow-lg hover:shadow-xl"
+                className="px-8 py-3 bg-cta-primary text-white rounded-full font-medium hover:bg-cta-primary/90 transition-colors shadow-lg hover:shadow-xl"
               >
                 探索商品
               </Link>
               <Link
                 href="/about"
-                className="px-8 py-3 bg-white text-forest-green border-2 border-forest-green rounded-full font-medium hover:bg-mint-green/10 transition-colors"
+                className="px-8 py-3 bg-white text-cta-primary border-2 border-cta-primary rounded-full font-medium hover:bg-cta-primary/10 transition-colors"
               >
                 了解更多
               </Link>
@@ -44,7 +51,7 @@ export default function Home() {
       </section>
 
       {/* Featured Products */}
-      <section className="py-16 md:py-24 bg-cloud-white">
+      <section className="py-16 md:py-24 bg-white/50 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -78,7 +85,7 @@ export default function Home() {
                       <span className="text-xs text-text-secondary">可訂製</span>
                     )}
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-forest-green transition-colors">
+                  <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-cta-primary transition-colors">
                     {product.name}
                   </h3>
                   <p className="text-text-secondary text-sm mb-4 line-clamp-2">
@@ -91,7 +98,7 @@ export default function Home() {
                           NT$ {product.originalPrice}
                         </span>
                       )}
-                      <span className="text-2xl font-bold text-forest-green">
+                      <span className="text-2xl font-bold text-cta-primary">
                         NT$ {product.price}
                       </span>
                     </div>
@@ -112,7 +119,7 @@ export default function Home() {
       </section>
 
       {/* IP Series Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-cream-yellow/10 to-peach-pink/10">
+      <section className="py-16 md:py-24 bg-white/30 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -133,10 +140,10 @@ export default function Home() {
                   <span className="text-5xl">🎨</span>
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-foreground mb-1 group-hover:text-forest-green transition-colors text-center">
+                  <h3 className="text-lg font-semibold text-foreground mb-1 group-hover:text-cta-primary transition-colors text-center">
                     {product.name}
                   </h3>
-                  <p className="text-forest-green font-bold text-center">
+                  <p className="text-cta-primary font-bold text-center">
                     NT$ {product.price}
                   </p>
                 </div>
@@ -155,7 +162,7 @@ export default function Home() {
       </section>
 
       {/* Brand Story Preview */}
-      <section className="py-16 md:py-24 bg-cloud-white">
+      <section className="py-16 md:py-24 bg-white/50 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-mint-green/10 to-cream-yellow/10 rounded-2xl p-8 md:p-12">
@@ -169,7 +176,7 @@ export default function Home() {
               <div className="text-center">
                 <Link
                   href="/about"
-                  className="inline-block px-8 py-3 bg-forest-green text-white rounded-full font-medium hover:bg-forest-green/90 transition-colors"
+                  className="inline-block px-8 py-3 bg-cta-primary text-white rounded-full font-medium hover:bg-cta-primary/90 transition-colors"
                 >
                   閱讀完整品牌故事
                 </Link>

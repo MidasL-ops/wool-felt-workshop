@@ -11,7 +11,7 @@ export default function About() {
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               About 薇薇V的羊毛氈手作坊
             </h1>
-            <p className="text-xl text-forest-green font-medium">
+            <p className="text-xl text-cta-primary font-medium">
               把柔軟，捧在手心；把喜悅，分享給世界。
             </p>
           </div>
@@ -55,7 +55,7 @@ export default function About() {
                 </p>
                 <p className="text-lg text-text-secondary leading-relaxed">
                   這份喜悅並不只來自外型的可愛，
-                  更來自作品中那份 <span className="font-semibold text-forest-green">溫暖、善意與正向能量</span>。
+                  更來自作品中那份 <span className="font-semibold text-cta-primary">溫暖、善意與正向能量</span>。
                 </p>
               </div>
 
@@ -78,7 +78,7 @@ export default function About() {
 
               {/* Closing */}
               <div className="text-center bg-gradient-to-br from-mint-green/20 to-forest-green/10 rounded-2xl p-8 md:p-12">
-                <p className="text-2xl md:text-3xl font-bold text-forest-green mb-4">
+                <p className="text-2xl md:text-3xl font-bold text-cta-primary mb-4">
                   🌈 因為可愛，是能療癒世界的語言。
                 </p>
               </div>
@@ -89,3 +89,4 @@ export default function About() {
     </div>
   );
 }
+

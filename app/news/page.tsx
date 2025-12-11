@@ -61,7 +61,7 @@ export default function News() {
                     </p>
                     <Link
                       href={`/news/${item.id}`}
-                      className="inline-block text-forest-green hover:text-forest-green/80 font-medium transition-colors"
+                      className="inline-block text-cta-primary hover:text-cta-primary/80 font-medium transition-colors"
                     >
                       閱讀更多 →
                     </Link>
@@ -104,7 +104,7 @@ export default function News() {
                   </p>
                   <Link
                     href={`/news/${item.id}`}
-                    className="inline-block text-forest-green hover:text-forest-green/80 font-medium text-sm transition-colors"
+                    className="inline-block text-cta-primary hover:text-cta-primary/80 font-medium text-sm transition-colors"
                   >
                     閱讀更多 →
                   </Link>
@@ -117,3 +117,4 @@ export default function News() {
     </div>
   );
 }
+

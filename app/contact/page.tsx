@@ -76,7 +76,7 @@ function ContactForm() {
                 <div className="mb-8 p-6 bg-mint-green/10 rounded-lg">
                   <p className="text-sm text-text-secondary mb-2">詢問商品：</p>
                   <p className="text-lg font-semibold text-foreground">{selectedProduct.name}</p>
-                  <p className="text-forest-green">NT$ {selectedProduct.price}</p>
+                  <p className="text-cta-primary">NT$ {selectedProduct.price}</p>
                 </div>
               )}
 
@@ -195,7 +195,7 @@ function ContactForm() {
 
                   <button
                     type="submit"
-                    className="w-full px-8 py-4 bg-forest-green text-white rounded-full font-medium hover:bg-forest-green/90 transition-colors shadow-lg hover:shadow-xl"
+                    className="w-full px-8 py-4 bg-cta-primary text-white rounded-full font-medium hover:bg-cta-primary/90 transition-colors shadow-lg hover:shadow-xl"
                   >
                     送出詢問
                   </button>
@@ -209,21 +209,21 @@ function ContactForm() {
                   <div className="text-center p-4 bg-mint-green/10 rounded-lg">
                     <span className="text-3xl mb-2 block">📧</span>
                     <p className="text-sm text-text-secondary mb-1">電子信箱</p>
-                    <a href="mailto:contact@woolfelt.com" className="text-foreground hover:text-forest-green transition-colors">
+                    <a href="mailto:contact@woolfelt.com" className="text-foreground hover:text-cta-primary transition-colors">
                       contact@woolfelt.com
                     </a>
                   </div>
                   <div className="text-center p-4 bg-cream-yellow/10 rounded-lg">
                     <span className="text-3xl mb-2 block">📷</span>
                     <p className="text-sm text-text-secondary mb-1">Instagram</p>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-forest-green transition-colors">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-cta-primary transition-colors">
                       @woolfelt_workshop
                     </a>
                   </div>
                   <div className="text-center p-4 bg-peach-pink/10 rounded-lg">
                     <span className="text-3xl mb-2 block">💬</span>
                     <p className="text-sm text-text-secondary mb-1">LINE</p>
-                    <a href="https://line.me" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-forest-green transition-colors">
+                    <a href="https://line.me" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-cta-primary transition-colors">
                       加入好友
                     </a>
                   </div>
@@ -251,3 +251,4 @@ export default function Contact() {
     </Suspense>
   );
 }
+
