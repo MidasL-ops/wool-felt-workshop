@@ -3,13 +3,14 @@ import Link from 'next/link';
 import { news } from '@/data/news';
 
 interface NewsDetailPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function NewsDetailPage({ params }: NewsDetailPageProps) {
-  const newsItem = news.find(n => n.id === params.id);
+export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
+  const { id } = await params;
+  const newsItem = news.find(n => n.id === id);
 
   if (!newsItem) {
     notFound();
