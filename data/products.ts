@@ -21,17 +21,21 @@ export const products: Product[] = [
   },
   {
     id: '2',
-    name: '森林小精靈擺飾',
-    category: '擺飾',
+    name: '睡睡垂耳狗・肩背小包',
+    category: '其他',
     price: 680,
-    description: '充滿童話感的森林小精靈，適合放在書桌或床頭，為空間增添療癒氛圍。',
-    images: ['/images/elf-1.jpg', '/images/elf-2.jpg'],
-    size: '約 8cm',
+    description: `這隻正在甜甜做夢的垂耳狗，是你的溫柔散步夥伴。
+柔軟的羊毛氈質地帶來溫暖觸感，搭配立體的大垂耳與可愛閉眼表情，讓人一眼就心融化。
+
+輕巧容量可放隨身小物，無論外出買咖啡、散步或逛市集，
+都能讓牠陪你一起，慢慢享受生活的小確幸。`,
+    images: ['/images/sleeping-dog-bag.jpg'],
+    size: '約 20cm × 15cm',
     customizable: true,
     inStock: true,
     featured: true,
-    story: '靈感來自於童話故事中的森林精靈，希望能為生活帶來一點魔法與驚喜。',
-    tags: ['童話', '擺飾', '療癒']
+    story: '這隻正在甜甜做夢的垂耳狗，是你的溫柔散步夥伴。柔軟的羊毛氈質地帶來溫暖觸感，搭配立體的大垂耳與可愛閉眼表情，讓人一眼就心融化。',
+    tags: ['包包', '實用', '療癒', '日常']
   },
   {
     id: '3',
@@ -49,17 +53,21 @@ export const products: Product[] = [
   },
   {
     id: '4',
-    name: 'IP系列 - 小貓咪',
-    category: 'IP系列',
+    name: '圓滾滾小狐狸犬・立體收納包',
+    category: '其他',
     price: 450,
-    description: '原創IP角色小貓咪，擁有獨特的表情和個性，是收藏的好選擇。',
-    images: ['/images/cat-ip-1.png', '/images/cat-ip-2.png'],
-    size: '約 6cm',
-    customizable: false,
+    description: `這顆圓滾滾、蓬鬆可愛的臉龐，是一隻活靈活現的小狐狸犬（博美犬）！
+
+柔軟豐厚的羊毛氈毛髮，忠實呈現了牠們的蓬鬆感，搭配一雙炯炯有神的烏黑大眼，瞬間融化人心。
+
+這款精巧的立體收納包，可以保護您的鑰匙、硬幣或耳機等隨身小物。不論是掛在背包上當作療癒小物，或是握在手心感受羊毛的溫暖觸感，牠都能為您的日常帶來一份會心一笑的溫柔陪伴。`,
+    images: ['/images/pomeranian-storage-bag.jpg'],
+    size: '約 8cm × 8cm',
+    customizable: true,
     inStock: true,
     featured: true,
-    story: '這是我們原創IP系列的第一個角色，小貓咪代表著好奇與活力。',
-    tags: ['IP', '原創', '收藏']
+    story: '這顆圓滾滾、蓬鬆可愛的臉龐，是一隻活靈活現的小狐狸犬（博美犬）！柔軟豐厚的羊毛氈毛髮，忠實呈現了牠們的蓬鬆感，搭配一雙炯炯有神的烏黑大眼，瞬間融化人心。',
+    tags: ['包包', '收納', '療癒', '實用']
   },
   {
     id: '5',
